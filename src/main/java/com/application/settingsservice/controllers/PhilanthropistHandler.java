@@ -23,7 +23,7 @@ public class PhilanthropistHandler {
     }
 
     @PostMapping("/philanthropists")
-    public ResponseEntity<PhilanthropistViewResponseDTO> createReport(
+    public ResponseEntity<PhilanthropistViewResponseDTO> createPhilanthropist(
             @RequestBody CreatePhilanthropistRequestDTO requestDTO) {
         return new ResponseEntity<>(this.philanthropistService.savePhilanthropist(requestDTO.toPhilanthropist()), HttpStatus.CREATED);
     }
